@@ -29,6 +29,10 @@ class Category(models.Model):
 
 class Product(models.Model):
 
+    # атрибут abstract Meta класс необходим для того, чтобы можно было наследовать
+    # внешний класс (в данном случае Product)
+    # так как модель Product не может быть использована в качестве джанго модели
+    # без использования данного атрибута класса Meta
     class Meta:
         abstract = True
 
